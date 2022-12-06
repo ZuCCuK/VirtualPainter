@@ -90,11 +90,11 @@ while True:
         imgCanvas = np.zeros((720, 1280, 3), np.uint8)
         cv2.rectangle(img, (426, 120 + 15), (596, 210 + 15), (128, 128, 128), cv2.FILLED)
         cv2.rectangle(img, (431, 125 + 15), (591, 205 + 15), (150, 150, 150), cv2.FILLED)
-        cv2.putText(img, "Cizim", (460, 193), cv2.FONT_HERSHEY_COMPLEX, 1, (80, 80, 80), 2)
+        cv2.putText(img, "Drawing", (460, 193), cv2.FONT_HERSHEY_COMPLEX, 1, (80, 80, 80), 2)
 
         cv2.rectangle(img, (686, 120 + 15), (855, 210 + 15), (128, 128, 128), cv2.FILLED)
         cv2.rectangle(img, (691, 125 + 15), (850, 205 + 15), (150, 150, 150), cv2.FILLED)
-        cv2.putText(img, "Tasima", (710, 193), cv2.FONT_HERSHEY_COMPLEX, 1, (80, 80, 80), 2)
+        cv2.putText(img, "Matching", (710, 193), cv2.FONT_HERSHEY_COMPLEX, 1, (80, 80, 80), 2)
 
         if len(lmList) != 0:
             # print(lmList)
