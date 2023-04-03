@@ -4,7 +4,6 @@ import cvzone
 import os
 import handTrackerModule as htm
 
-
 ######################
 sekil_modu = ""
 x,y,z = 0,0,0
@@ -12,7 +11,6 @@ r,g,b = 255,255,255
 anlik_renk = x,y,z
 thickness = 15
 ######################
-
 
 success_status1=False
 success_status2=False
@@ -23,19 +21,15 @@ blue =  cv2.imread("../blue.png")
 red = cv2.imread("../red.png")
 green =  cv2.imread("../green.png")
 
-
 save = cv2.imread("../save.png")
 trash= cv2.imread("../trash.png")
 trash=cv2.resize(trash,(80,80))
-
 
 blue = cv2.imread("../blue.png")
 red = cv2.imread("../red.png")
 green = cv2.imread("../green.png")
 
-
 red=cv2.resize(red,(265,50))
-
 
 blue= cv2.flip(blue,1)
 red=cv2.flip(red,1)
@@ -59,7 +53,6 @@ daix1v = daic1v - 140
 daix2v = daic1v + 140
 daiy1v = daic2v - 140
 daiy2v = daic2v + 140
-
 
 
 kare = ""
@@ -121,16 +114,12 @@ while True:
                         zamsın = "t"
 
 
-
-
     if zamsın == "c":
 
 
-    #menu
         cv2.rectangle(img, (0, 0), (85, 65), (128, 128, 128), cv2.FILLED)
         cv2.rectangle(img, (5, 5), (80, 60), (20, 30, 180), cv2.FILLED)
         cv2.putText(img, "X", (34,42), cv2.FONT_HERSHEY_COMPLEX, 1, (60, 60, 50), 2)
-
 
 
         cv2.rectangle(img, (241, 135), (305, 199), (128, 128, 128), 7)
@@ -199,7 +188,6 @@ while True:
             x2, y2 = lmList[12][1:]
             fingers = detector.fingersUp()
             #print(fingers)
-
 
             if (fingers[1] == False and fingers[2] == False):
                 l.clear()
@@ -369,7 +357,6 @@ while True:
 
                 if x1<= 100 and y1<=80:
                     zamsın = "b"
-
 
 
         denemedaire = cv2.circle(imgCanvas, (daic1, daic2), 150, (220,0,0), cv2.FILLED)
