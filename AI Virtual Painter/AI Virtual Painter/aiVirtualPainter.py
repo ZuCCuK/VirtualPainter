@@ -39,21 +39,17 @@ kam = cv2.VideoCapture(0)
 kam.set(3, 1280)
 kam.set(4, 720)
 
-
-
 daic1 , daic2 = 200 , 200
 daix1 = daic1 - 140
 daix2 = daic1 + 140
 daiy1 = daic2 - 140
 daiy2 = daic2 + 140
 
-
 daic1v , daic2v = 200 , 500
 daix1v = daic1v - 140
 daix2v = daic1v + 140
 daiy1v = daic2v - 140
 daiy2v = daic2v + 140
-
 
 kare = ""
 
@@ -64,7 +60,6 @@ v=1
 z1=0
 l=[]
 fl= tuple(enumerate(l))
-
 
 detector = htm.handDetector(detectionCon=0.85)
 xp, yp = 0,0
@@ -77,7 +72,6 @@ while True:
     img = cv2.resize(img, (1280, 720))
     img = detector.findHands(img)
     lmList = detector.findPosition(img, draw=False)
-
 
     if zamsın =="b":
         imgCanvas = np.zeros((720, 1280, 3), np.uint8)
@@ -113,14 +107,11 @@ while True:
                     if x1>=686 and x1<= 885:
                         zamsın = "t"
 
-
     if zamsın == "c":
-
 
         cv2.rectangle(img, (0, 0), (85, 65), (128, 128, 128), cv2.FILLED)
         cv2.rectangle(img, (5, 5), (80, 60), (20, 30, 180), cv2.FILLED)
         cv2.putText(img, "X", (34,42), cv2.FONT_HERSHEY_COMPLEX, 1, (60, 60, 50), 2)
-
 
         cv2.rectangle(img, (241, 135), (305, 199), (128, 128, 128), 7)
         cv2.rectangle(img, (95, 120+15), (220, 210+15), (128, 128, 128), cv2.FILLED)
@@ -372,14 +363,12 @@ while True:
             success_status2=True
             print ("oke")
 
-
         if success_status1 == True:
           cv2.circle(img, (1100, 180), 160, (0, 220, 0), 20)
         elif success_status2 ==True:
          cv2.circle(img,  (1100, 540) , 160, (0, 220, 0), 20)
         if success_status1==True and success_status2==True:
          zamsın="b"
-
 
     imgCanvas = cv2.resize(imgCanvas, (1280, 720))
     img = cv2.addWeighted(img, 0.7, imgCanvas, 0.5, 0)
